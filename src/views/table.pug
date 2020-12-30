@@ -1,16 +1,27 @@
 extends layout
 
 block content
-    .centered
-        table
+  body
+    center
+        table(width='100%', cellspacing='0', cellpadding='0', border='0', bgcolor='#F2F2F2')
+          each value in data
             tr
-              th Data
-              each val, index in data
-                th #{val.Country}
-              each val, index in data
-                tr
-                  td #{val.Date.split('T')[0]}
-                  td #{val.Cases}
+              each col in value
+                th #{col} 
+
+
+          //- thead
+          //-   tr
+          //-     th Data
+          //-     each value, key in data
+          //-       th #{key}
+          //- tbody
+          //-   each value, key in data
+          //-     each val in  value
+          //-       tr
+          //-         td #{value.Date}
+          //-         //- td #{value.Cases}
                   
     p Visit the  
       a(href='/about') about page
+    p Displaing data concerning countries with provinces counted separatelly (eg. France, UK, China) is not possibe at the moment
