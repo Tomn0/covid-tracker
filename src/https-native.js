@@ -1,5 +1,5 @@
 const https = require("https");
-const url = "https://covid19api.com/";
+const url = "https://api.covid19api.com/country/poland/status/confirmed/live?from=2020-05-06T00:00:00Z&to=2020-05-12T00:00:00Z";
 
 https.get(url, res => {
   res.setEncoding("utf8");

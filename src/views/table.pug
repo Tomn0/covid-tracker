@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    .centered
+        table
+            tr
+              th Data
+              each val, index in data
+                th #{val.Country}
+              each val, index in data
+                tr
+                  td #{val.Date.split('T')[0]}
+                  td #{val.Cases}
+                  
+    p Visit the  
+      a(href='/about') about page
